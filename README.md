@@ -1,6 +1,14 @@
-<h1>GOMOKU AI in C</h1>
- 
-Gomoku is a board game very famous in my own country (Vietnam), as well as other Asian countries, according to Wikipedia. 
-The rule is simple. Given a board with a size of your choice, you and the opponent must connect n consecutive pieces (can be on diagonals or straight lines) with at least one end still open (open here as in the no opponent piece is on the same line).
+# 🎮 GOMOKU AI in C
 
-In this repo, I will utilize the minimax algorithm to make a bot that plays the game. If I have time I may also do alpha beta pruning. 
+## 🧩 Project Overview
+**Intro to Gomoku**<br>
+Gomoku (also known as **Cờ Caro**) is a classic strategy board game popular in Vietnam and many other Asian countries. According to [Wikipedia](https://en.wikipedia.org/wiki/Gomoku), the rules are simple yet deeply strategic:
+
+- The game is played on a grid-based board.
+- Two players take turns placing their pieces.
+- The objective is to **connect _n_ consecutive pieces** in a row — horizontally, vertically, or diagonally.
+- A valid win must have **at least one open end**, meaning the winning line is not completely blocked by the opponent's pieces on both sides.
+
+**Code idea**<br>
+In this repo, I will utilize the minimax algorithm to make a bot that plays the game. For simplicity sake (my mental health's sake) the code only works for game of 8x8 board and win condition of 4. 
+> _"If I hate myself enough in the future, I may actually optimize this."_
