@@ -1,0 +1,1 @@
+X wins on top-left to bottom-right diagonals!

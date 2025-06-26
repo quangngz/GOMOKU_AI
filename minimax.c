@@ -1,5 +1,6 @@
 #include "functions.h"
 
+
 node_t* create_node(int value){
     node_t *new_node = (node_t*)malloc(sizeof(node_t));
     if (new_node == NULL) {
@@ -45,20 +46,37 @@ void free_node(node_t* node) {
     free(node); 
 }
 
-int evaluate_position(uint64_t board, int X_turn){
-    if (board == FULL_VALUE) return 0; // So its a tie. 
-    if (X_turn && win(1, board)) return 10; // X wins
-    if (!X_turn && win(0, board)) return -10; // O wins
-
-    /*Strategy is: higher score if a piece is in the middle with unblocked ends 
-    if two consecutive pieces with unblocked ends, then a higher score. 
-    if WINCONDITION - 1 consecutive pieces with unblocked ends and opponent doesn't have it, then win. 
-    strategy for attacking is to make the most consecutive pieces with unblocked ends.
-    strategy for defending is to block most .
-    */ 
+// We use bit operators to find our consecutive patterns
+/*       >>1      >>2      >>3
+00011110 00001111 00011110 00111100
+00000000 00000000 00000000 00000000
+00000000 00000000 00000000 00000000 
+00000000 00000000 00000000 00000000
+If we take all of these and 
+*/
 
 
 
+int consecutive_fours(int64_t board, int row, int col) {
+    for (int i )
+    
+}
+
+double evaluate_position(board_t board, int X_turn){
+    double my_score = 0; 
+    double opponent_score = 0; 
+    my_score += evaluate_line(X_pos, ROW, COL)
+    /*TODO: WIN_CONDITION = 4
+    Prioritize putting in spaces with little of opponents, and more of our own. 
+    If open 4, basically is a win. open 3 and is your turn, also is a win. 
+    half-open 4 is forcing, and hence is strong. 
+    Creating double threats is strong.
+    Try to search near the active zone, i.e. focus only up to the blank space at most 3 blocks away from 
+    any marks.
+    Score the opponent and subtract that into your position. 
+    Make a heat map. 
+    */
+    
 }
 
 
